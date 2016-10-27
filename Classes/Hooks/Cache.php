@@ -60,6 +60,8 @@ class Cache extends AbstractHook {
             return;
         }
 
+        // comment this out, as backend does not work to edit pages if some pages are hidden
+        /*
         if (($params['table'] === 'pages' || $params['table'] === 'tt_content' || isset($params['cacheCmd']))
                 && isset($params['pageIdArray']) && is_array($params['pageIdArray']) && !empty($params['pageIdArray'])
         ) {
@@ -68,6 +70,7 @@ class Cache extends AbstractHook {
             }
             return;
         }
+        */
 
     }
 
