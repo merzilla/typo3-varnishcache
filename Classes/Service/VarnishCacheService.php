@@ -63,7 +63,7 @@ class VarnishCacheService
     {
 
         $currentPage = $this->pageRepository->getPage($currentPageId);
-        if (is_array($currentPage) && ($currentPage['deleted'] == 1 || $currentPage['hidden'] == 1) || $currentPage['doktype'] != 1) {
+        if ($currentPageId > 0 && is_array($currentPage) && ($currentPage['deleted'] == 1 || $currentPage['hidden'] == 1 || $currentPage['doktype'] != 1)) {
             return false;
         }
 
